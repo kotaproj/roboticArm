@@ -17,6 +17,17 @@
 
 ![image](https://user-images.githubusercontent.com/59393206/116837583-0181d800-ac06-11eb-8aab-61661368b649.png)
 
+# Code
+
+- src_httpd
+  - ESP32側 - MicroPython1.15 - HTTP Server
+- src_httpc
+  - PC側 - HTTP Client
+- src_mqtt_subscribe
+  - ESP32側 - MicroPython1.15 - MQTT Subscribe
+- src_mqtt_publish
+  - PC側 - MQTT Publisher
+
 # Features
 
 - HTTP - GETメソッドで、ロボットアームを制御
