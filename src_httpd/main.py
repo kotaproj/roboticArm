@@ -28,10 +28,8 @@ SMOTOR_NO3_PIN3 = (22)
 SMOTOR_NO3_PIN4 = (23)
 
 # Set your Wifi SSID and password
-# SSID = "XXXXXXXXXXXX"
-# PASS = "XXXXXXXXXXXX"
-SSID = "Buffalo-G-6B00"
-PASS = "a5auc4dehctdx"
+SSID = "XXXXXXXXXXXX"
+PASS = "XXXXXXXXXXXX"
 
 class HttpdProc():
     
