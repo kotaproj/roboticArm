@@ -21,7 +21,7 @@ def run_servo(val=70):
     return
 
 
-def run_smmotor(no=1, val=0):
+def run_smotor(no=1, val=0):
     """GET method
     - ex. http://ipadr:80?name=smotor&no=1&val=-2048&end=dummy
     Args:
@@ -39,17 +39,17 @@ def run_smmotor(no=1, val=0):
 
 
 def main():
-    run_smmotor(1, -512)
+    run_smotor(1, -512)
     time.sleep(0.5)
-    run_smmotor(1, 512)
+    run_smotor(1, 512)
     time.sleep(0.5)
-    run_smmotor(2, 512)
+    run_smotor(2, 512)
     time.sleep(0.5)
-    run_smmotor(2, -512)
+    run_smotor(2, -512)
     time.sleep(0.5)
-    run_smmotor(3, 512)
+    run_smotor(3, 512)
     time.sleep(0.5)
-    run_smmotor(3, -512)
+    run_smotor(3, -512)
     time.sleep(0.5)
     run_servo(80)
     time.sleep(0.5)
