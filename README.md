@@ -8,10 +8,18 @@
 
 # System
 
+## HTTP Client(PC) -> HTTP Server(RoboticArm)
+
+![image](https://user-images.githubusercontent.com/59393206/117021669-823df280-ad32-11eb-8dce-4ac8cc6f4547.png)
+
+## MQTT : Publisher(PC) - Broker(RPi) - Subcriber(RoboticArm)
+
+
 ![image](https://user-images.githubusercontent.com/59393206/116837583-0181d800-ac06-11eb-8aab-61661368b649.png)
 
 # Features
 
+- HTTP - GETメソッドで、ロボットアームを制御
 - MQTTを経由し、ロボットアームを制御
 
 # Requirement
@@ -56,12 +64,26 @@
    1. なぜか公式サイトに組み立て方が記載されていないyoutubeとかを見る
 3. 接続する
    1. コードをベースに確認する
-4. 別のシステムからmqttを経由し、コマンドを送信する
+4. 別のシステムからHTTPを経由し、コマンドを送信する
+   1. ESP32は、Web Serverとして動作
+   2. HTTPリクエスト、後述のコマンドを送付する
+5. 別のシステムからmqttを経由し、コマンドを送信する
    1. ESP32は、MQTT - Subcriberとして動作
    2. MQTTサーバは別途用意すること
    3. Pulisherは、後述のコマンドを送付する
 
-## コマンド
+## HTTPリクエスト
+
+- name:servo
+  - no:1
+  - val:55-80
+- name:smotor
+  - no:1/2/3
+  - val:-2048 - 2048
+
+例:GET http://ipadr:80?name=smotor&no=1&val=-2048&end=dummy
+
+## MQTTコマンド
 
 - topic
   - "topic_dev"
